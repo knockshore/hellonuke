@@ -9,7 +9,7 @@
 # Benilda Key
 #  CommentedJun 30, 2014 at 20:48
 
-CC = gcc
+CC = g++
 
 LD = ld
 
@@ -17,7 +17,7 @@ LIBPATH   = -L"/c/programs/mingw/mingw/lib" \
 			-L"/c/programs/mingw/mingw/lib/gcc/mingw32/4.7.2"
  
 # LIBS = -lstdc++ -lmingw32 -lgcc -lmsvcrt
-LIBS = -lmingw32 -lgcc -lmsvcrt -lcrtdll -luser32 -lkernel32 -lgdi32 -lmsimg32
+LIBS = -lstdc++ -lmingw32 -lgcc -lmsvcrt -lcrtdll -luser32 -lkernel32 -lgdi32 -lmsimg32
 			
 # LIBS = -lcrtdll
  
@@ -26,7 +26,7 @@ OBJS      = main.o #\
 			# c:/programs/mingw/mingw/lib/gcc/mingw32/4.7.2/crtbegin.o \
 			# c:/programs/mingw/mingw/lib/gcc/mingw32/4.7.2/crtend.o
 # -std=c89 
-LDFLAGS   = $(LIBPATH) $(LIBS)
+LDFLAGS   = -mwindows $(LIBPATH) $(LIBS)
 # LDFLAGS   = -s --subsystem windows $(LIBPATH) $(LIBS)
 #LDFLAGS   = -c --subsystem windows $(LIBPATH) $(LIBS)
 

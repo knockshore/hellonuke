@@ -6,6 +6,8 @@
 #include <string.h>
 #include <time.h>
 #include <limits.h>
+// https://stackoverflow.com/questions/63461091/sqrt-cos-sin-was-not-declared-in-this-scope
+#include <cmath>
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
